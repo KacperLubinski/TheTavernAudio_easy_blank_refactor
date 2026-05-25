@@ -752,6 +752,7 @@ GameObject:
   - component: {fileID: 237163388}
   - component: {fileID: 237163390}
   - component: {fileID: 237163392}
+  - component: {fileID: 237163393}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -839,6 +840,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractorSource: {fileID: 237163388}
   InteractRange: 3
+--- !u!114 &237163393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237163387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &239062190
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,6 +2177,8 @@ GameObject:
   - component: {fileID: 613997993}
   - component: {fileID: 613997990}
   - component: {fileID: 613997989}
+  - component: {fileID: 613997995}
+  - component: {fileID: 613997994}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2331,6 +2348,48 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &613997994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613997984}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c56cf05512f200469e724794684084e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 613997990}
+  footstepEvent:
+    Guid:
+      Data1: 181473816
+      Data2: 1167020739
+      Data3: 1298046862
+      Data4: 740268512
+    Path: event:/DrewnoKroki
+  stepInterval: 0.5
+--- !u!114 &613997995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613997984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c56cf05512f200469e724794684084e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 613997990}
+  footstepEvent:
+    Guid:
+      Data1: 181473816
+      Data2: 1167020739
+      Data3: 1298046862
+      Data4: 740268512
+    Path: event:/DrewnoKroki
+  stepInterval: 0.5
 --- !u!1 &688602384
 GameObject:
   m_ObjectHideFlags: 0
