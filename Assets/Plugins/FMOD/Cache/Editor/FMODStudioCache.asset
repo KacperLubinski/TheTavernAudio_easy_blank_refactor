@@ -35,10 +35,10 @@ MonoBehaviour:
   Path: ../../../Desktop/TawernaAudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639153219169052225
+  lastModified: 639153468108322121
   FileSizes:
   - Name: Desktop
-    Value: 35200
+    Value: 1009536
   Exists: 1
 --- !u!114 &-1241256951800608729
 MonoBehaviour:
@@ -55,10 +55,10 @@ MonoBehaviour:
   Path: ../../../Desktop/TawernaAudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639153219169092113
+  lastModified: 639153468108352037
   FileSizes:
   - Name: Desktop
-    Value: 760
+    Value: 810
   Exists: 1
 --- !u!114 &-76735386520651393
 MonoBehaviour:
@@ -104,12 +104,13 @@ MonoBehaviour:
   - {fileID: -5147722649259195835}
   EditorEvents:
   - {fileID: -76735386520651393}
+  - {fileID: 6842044093580248072}
   EditorParameters: []
   MasterBanks:
   - {fileID: -5147722649259195835}
   StringsBanks:
   - {fileID: -1241256951800608729}
-  cacheTime: 639153219169092113
+  cacheTime: 639153468108352037
   cacheVersion: 131636
 --- !u!114 &6651347794250023892
 MonoBehaviour:
@@ -131,3 +132,30 @@ MonoBehaviour:
   - Name: Desktop
     Value: 712
   Exists: 1
+--- !u!114 &6842044093580248072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Ogie\u0144"
+  m_EditorClassIdentifier: 
+  Path: "event:/Ogie\u0144"
+  Guid:
+    Data1: -299557388
+    Data2: 1298056272
+    Data3: -1999010412
+    Data4: 1195076017
+  Banks:
+  - {fileID: -5147722649259195835}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 59000
