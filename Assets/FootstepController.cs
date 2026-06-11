@@ -1,7 +1,4 @@
 using FMODUnity;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
@@ -10,36 +7,29 @@ public class NewBehaviourScript : MonoBehaviour
     public CharacterController controller;
 
     [Header("FMOD")]
-    public EventReference woodStep;     
+    public EventReference woodStep;
     public EventReference stoneStep;
 
     [Header("Footsteps")]
-    public float stepInterval = 0.5f;
+    public float walkInterval = 0.5f;
+    public float sprintInterval = 0.28f;
 
     private float stepTimer;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        Vector3 horizontalVelocity =
-            new Vector3(
-                controller.velocity.x,
-                0,
-                controller.velocity.z
-            );
+        Vector3 horizontalVelocity = new Vector3(
+            controller.velocity.x,
+            0,
+            controller.velocity.z
+        );
 
-        bool isMoving =
-            horizontalVelocity.magnitude > 0.1f;
+        bool isMoving = horizontalVelocity.magnitude > 0.1f;
+        bool isGrounded = controller.isGrounded;
 
-        bool isGrounded =
-            controller.isGrounded;
+        bool isSprinting = Input.GetKey(KeyCode.LeftShift);
+
+        float currentInterval = isSprinting ? sprintInterval : walkInterval;
 
         if (isMoving && isGrounded)
         {
@@ -48,8 +38,12 @@ public class NewBehaviourScript : MonoBehaviour
             if (stepTimer <= 0f)
             {
                 PlayFootstep();
-                stepTimer = stepInterval;
+                stepTimer = currentInterval;
             }
+        }
+        else
+        {
+            stepTimer = 0f;
         }
     }
 
@@ -69,9 +63,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     string GetSurface()
     {
-        RaycastHit hit;
-
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 2f))
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 2f))
         {
             return hit.collider.tag;
         }
