@@ -10,7 +10,8 @@ public class NewBehaviourScript : MonoBehaviour
     public CharacterController controller;
 
     [Header("FMOD")]
-    public EventReference footstepEvent;
+    public EventReference woodStep;     
+    public EventReference stoneStep;
 
     [Header("Footsteps")]
     public float stepInterval = 0.5f;
@@ -54,9 +55,27 @@ public class NewBehaviourScript : MonoBehaviour
 
     void PlayFootstep()
     {
-        RuntimeManager.PlayOneShot(
-            footstepEvent,
-            transform.position
-        );
+        string surface = GetSurface();
+
+        if (surface == "Stone")
+        {
+            RuntimeManager.PlayOneShot(stoneStep, transform.position);
+        }
+        else
+        {
+            RuntimeManager.PlayOneShot(woodStep, transform.position);
+        }
+    }
+
+    string GetSurface()
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 2f))
+        {
+            return hit.collider.tag;
+        }
+
+        return "Wood";
     }
 }

@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7458229832702799773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drzwi
+  m_EditorClassIdentifier: 
+  Path: event:/Drzwi
+  Guid:
+    Data1: 1805217615
+    Data2: 1309489833
+    Data3: 1534103719
+    Data4: -1730455178
+  Banks:
+  - {fileID: -5147722649259195835}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6640326444226438985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,11 +62,38 @@ MonoBehaviour:
   Path: ../../../Desktop/TawernaAudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639153468108322121
+  lastModified: 639167764070370176
   FileSizes:
   - Name: Desktop
-    Value: 1009536
+    Value: 1027392
   Exists: 1
+--- !u!114 &-1523324634724048020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Kamie\u0144Kroki"
+  m_EditorClassIdentifier: 
+  Path: "event:/Kamie\u0144Kroki"
+  Guid:
+    Data1: 1667178064
+    Data2: 1319460563
+    Data3: 152025247
+    Data4: 1870518216
+  Banks:
+  - {fileID: -5147722649259195835}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1241256951800608729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,10 +109,10 @@ MonoBehaviour:
   Path: ../../../Desktop/TawernaAudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639153468108352037
+  lastModified: 639167764070395196
   FileSizes:
   - Name: Desktop
-    Value: 810
+    Value: 898
   Exists: 1
 --- !u!114 &-76735386520651393
 MonoBehaviour:
@@ -105,12 +159,14 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -76735386520651393}
   - {fileID: 6842044093580248072}
+  - {fileID: -7458229832702799773}
+  - {fileID: -1523324634724048020}
   EditorParameters: []
   MasterBanks:
   - {fileID: -5147722649259195835}
   StringsBanks:
   - {fileID: -1241256951800608729}
-  cacheTime: 639153468108352037
+  cacheTime: 639167764070395196
   cacheVersion: 131636
 --- !u!114 &6651347794250023892
 MonoBehaviour:
